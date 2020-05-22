@@ -1,0 +1,17 @@
+    S -> PROG #1
+ PROG -> CALCS #2 |
+CALCS -> CALC #80 |
+         CALCS #81
+ CALC -> E #82 |
+         STR #84
+    E -> $int #6 |
+         $dec #7
+  STR -> $str #42 |
+         SIF #44
+  SIF -> ( if BOOL STR STR ) #44
+ BOOL -> $bool #48 |
+         REL #51 |
+         OR #52
+  REL -> ( < E E ) #60
+   OR -> HOR BOOL ) #65
+  HOR -> ( or #66
